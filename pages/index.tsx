@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import {useState} from 'react'
 import CharacterList from '../components/index.js/characterList'
-import Search from '../components/Search'
+import Search from '../components/index.js/Search'
 
 const Home = ({characters}:any) => {
   const [character,setcharacter] = useState(characters.results)
@@ -44,7 +44,7 @@ export async function getStaticProps() {
   console.log(data)
  return{
   props: {
-    characters: data
+    characters: data,
  },
 }
 }
